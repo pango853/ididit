@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">I Did It</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_checklist">Checklist</string>
+    <string name="title_settings">Settings</string>
+    <string-array name="tasks">
+        <item>Holding hands together when walking (all time)</item>
+        <item>Holding handle in cars (all time)</item>
+        <item>NO speaking aloud in cars</item>
+        <item>(Keito,) Listen to sis</item>
+    </string-array>
+</resources>
