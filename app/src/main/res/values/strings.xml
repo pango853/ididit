@@ -9,4 +9,5 @@
         <item>NO speaking aloud in cars</item>
         <item>(Keito,) Listen to sis</item>
     </string-array>
+    <string name="desc_add_checklist">Add A Checklist</string>
 </resources>
