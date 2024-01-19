@@ -17,7 +17,7 @@
         android:textSize="20sp" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/list_checklists"
+        android:id="@+id/rv_checklists"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_marginStart="@dimen/activity_horizontal_margin"
@@ -34,6 +34,7 @@
         android:clickable="true"
         android:contentDescription="@string/desc_add_checklist"
         android:focusable="true"
+        android:onClick="onAddItem"
         android:src="@android:drawable/ic_input_add" />
 
     <EditText

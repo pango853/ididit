@@ -10,4 +10,5 @@
         <item>(Keito,) Listen to sis</item>
     </string-array>
     <string name="desc_add_checklist">Add A Checklist</string>
+    <string name="txt_sample">Sample</string>
 </resources>
