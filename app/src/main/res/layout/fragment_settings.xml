@@ -35,4 +35,17 @@
         android:contentDescription="@string/desc_add_checklist"
         android:focusable="true"
         android:src="@android:drawable/ic_input_add" />
+
+    <EditText
+        android:id="@+id/editTextTextMultiLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/btn_add"
+        android:layout_alignBottom="@id/btn_add"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@id/btn_add"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Enter a new checklist here..."
+        android:inputType="textMultiLine" />
 </RelativeLayout>
