@@ -1,6 +1,7 @@
 package net.pangos.ididit.ui.settings
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,6 +15,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 import net.pangos.ididit.databinding.FragmentSettingsBinding
 
 class SettingsFragment : Fragment() {
+    val TAG = "SettingsFragment"
 
     private var _binding: FragmentSettingsBinding? = null
 
@@ -22,7 +24,7 @@ class SettingsFragment : Fragment() {
     private val binding get() = _binding!!
 
     private val items: ArrayList<String> = ArrayList()
-    //private var listAdapter: ArrayAdapter<String>? = null
+    private var rvAdapter:ChecklistsAdapter? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -46,7 +48,8 @@ class SettingsFragment : Fragment() {
         items.add("test 3")
 
         val rvChecklists: RecyclerView = binding.rvChecklists
-        rvChecklists.adapter = ChecklistsAdapter(items)
+        rvAdapter = ChecklistsAdapter(items)
+        rvChecklists.adapter = rvAdapter
         // Set layout manager to position the items
         rvChecklists.layoutManager = LinearLayoutManager(this.context)
 
@@ -60,16 +63,32 @@ class SettingsFragment : Fragment() {
             //startActivity(intent)
             addItemAction(editText)
         }
+        faButton.setOnLongClickListener{
+            removeItemAction()
+        }
 
         return root
     }
 
     private fun addItemAction(txt: TextView){
         Toast.makeText(this.context, "You entered: " + txt.text, Toast.LENGTH_SHORT).show()
-        // [TODO] add checklist
-        // String item = txt.text.toString()
-        // itemsAdapter.add(item)
-        txt.text = ""
+
+        val item = txt.text.toString()
+        // Unlike ListView, no need to change via adapter
+        // just a data at the data source
+        val len = rvAdapter?.itemCount
+        // then notify the adapter about it
+        if (null != len) {
+            items.add(item)
+            rvAdapter?.notifyItemInserted(len)
+            // also clean up the existing textview
+            txt.text = ""
+        }else{
+            Log.d(TAG, "ERROR")
+        }
+    }
+    private fun removeItemAction(): Boolean{
+        return false
     }
 
     override fun onDestroyView() {

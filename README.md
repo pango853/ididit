@@ -91,7 +91,7 @@ tasks ListView
 
 # Tutorials
 
-- https://guides.codepath.com/android/Basic-Todo-App-Tutorial = https://github.com/codepath/android_guides/wiki/Basic-Todo-App-Tutorial
+- [*] https://guides.codepath.com/android/Basic-Todo-App-Tutorial = https://github.com/codepath/android_guides/wiki/Basic-Todo-App-Tutorial
 	1. create layouts: ListView, EditText, Button; 2. add ListView into MainActivity; 3. write add item button; 4. long click to remove item; 5. reading and writing to file
 
 - https://hub.packtpub.com/how-to-develop-a-simple-to-do-list-app-tutorial/
@@ -106,3 +106,6 @@ tasks ListView
 
 - https://medium.com/swlh/simple-settings-library-build-a-settings-screen-in-seconds-5b6394fbd2fc, https://github.com/marcauberer/simple-settings
 
+# More
+
+- https://guides.codepath.com/android/using-the-recyclerview
