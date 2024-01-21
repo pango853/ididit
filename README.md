@@ -89,6 +89,19 @@ tasks ListView
 	- onItemLongClick -> show details with confirmation button: I did it! -> check and show toast
 
 
+# TODO Tasks
+ChecklistsActivity
+Remove old SettingsFragment views
+Load Save Yaml
+
+Activity does not have an ActionBar set via setSupportActionBar()
+
+Caused by: java.lang.IllegalStateException: 
+This Activity already has an action bar supplied by the window decor. 
+Do not request Window.FEATURE_SUPPORT_ACTION_BAR and set windowActionBar to false in your theme 
+to use a Toolbar instead.
+																										
+
 # Tutorials
 
 - [*] https://guides.codepath.com/android/Basic-Todo-App-Tutorial = https://github.com/codepath/android_guides/wiki/Basic-Todo-App-Tutorial

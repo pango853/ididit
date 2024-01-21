@@ -11,7 +11,9 @@ import androidx.recyclerview.widget.RecyclerView
 import net.pangos.ididit.R
 
 class ChecklistsAdapter(private val dataset: MutableList<String>): RecyclerView.Adapter<ChecklistsAdapter.ViewHolder>() {
-    private val TAG = "CustomAdapter"
+    companion object{
+        private val TAG: String? = ChecklistsAdapter::class.qualifiedName
+    }
 
     /**
      * Provide a reference to the type of views that you are using

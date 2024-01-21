@@ -1,10 +1,12 @@
 package net.pangos.ididit.ui.settings
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
@@ -15,7 +17,9 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 import net.pangos.ididit.databinding.FragmentSettingsBinding
 
 class SettingsFragment : Fragment() {
-    val TAG = "SettingsFragment"
+    companion object{
+        private val TAG = SettingsFragment::class.simpleName
+    }
 
     private var _binding: FragmentSettingsBinding? = null
 
@@ -36,6 +40,12 @@ class SettingsFragment : Fragment() {
 
         _binding = FragmentSettingsBinding.inflate(inflater, container, false)
         val root: View = binding.root
+
+        val setting1: Button = binding.manageChecklistsBtn
+        setting1.setOnClickListener{
+            val gotoChecklistsActivity = Intent(this.activity, ChecklistsActivity::class.java)
+            startActivity(gotoChecklistsActivity)
+        }
 
         val textView: TextView = binding.textSettings
         notificationsViewModel.text.observe(viewLifecycleOwner) {
