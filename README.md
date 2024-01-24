@@ -71,11 +71,11 @@ checklists:
 	  - name: One plus exercise
 	    remarks: To ensure we are healthy everyday
   - name: Bedtime Routines
-    id: 4-bedtime
-	time-start: 19:00:00
-	time-end: 22:00:00
+    id: 
+	time-start: 
+	time-end: 
     tasks:
-      - name: Clean up toys
+      - name: 
 
 
 ```
@@ -90,17 +90,16 @@ tasks ListView
 
 
 # TODO Tasks
-ChecklistsActivity
-Remove old SettingsFragment views
-Load Save Yaml
 
-Activity does not have an ActionBar set via setSupportActionBar()
+- Now showing RENDER PROBLEM!!!
 
-Caused by: java.lang.IllegalStateException: 
-This Activity already has an action bar supplied by the window decor. 
-Do not request Window.FEATURE_SUPPORT_ACTION_BAR and set windowActionBar to false in your theme 
-to use a Toolbar instead.
-																										
+
+- [*] Remove old SettingsFragment views
+- [ ] Load Save Yaml
+- [ ] ChecklistsActivity
+	  + [ ] Edit dialog
+
+
 
 # Tutorials
 

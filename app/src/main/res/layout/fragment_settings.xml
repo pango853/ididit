@@ -5,55 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.settings.SettingsFragment">
-
     <Button
         android:id="@+id/manage_checklists_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Manage your checklists"
         android:textAlignment="textStart"/>
-
-    <TextView
-        android:id="@+id/text_settings"
-        style="@style/TextAppearance.AppCompat.Large"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:textAlignment="center"
-        android:textSize="20sp" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_checklists"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_marginStart="@dimen/activity_horizontal_margin"
-        android:layout_marginTop="@dimen/activity_horizontal_margin" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/btn_add"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="@dimen/activity_horizontal_margin"
-        android:layout_marginBottom="64dp"
-        android:clickable="true"
-        android:contentDescription="@string/desc_add_checklist"
-        android:focusable="true"
-        android:onClick="onAddItem"
-        android:src="@android:drawable/ic_input_add" />
-
-    <EditText
-        android:id="@+id/editTextTextMultiLine"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@id/btn_add"
-        android:layout_alignBottom="@id/btn_add"
-        android:layout_alignParentLeft="true"
-        android:layout_toLeftOf="@id/btn_add"
-        android:ems="10"
-        android:gravity="start|top"
-        android:hint="Enter a new checklist here..."
-        android:inputType="textMultiLine" />
 </RelativeLayout>

@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.TextView
 import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import net.pangos.ididit.databinding.ActivityChecklistsBinding
 
 class ChecklistsActivity : AppCompatActivity() {
@@ -21,7 +23,7 @@ class ChecklistsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         binding = ActivityChecklistsBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        //setContentView(binding.root)
 
         // [TODO] Use ActionBar or Toolbar instead
         //setSupportActionBar(binding.toolbar)
@@ -30,6 +32,11 @@ class ChecklistsActivity : AppCompatActivity() {
         //appBarConfiguration = AppBarConfiguration(navController.graph)
         //setupActionBarWithNavController(navController, appBarConfiguration)
 
+        val rvChecklists: RecyclerView = binding.checklists.rvChecklists
+        rvAdapter = ChecklistsAdapter(items)
+        rvChecklists.adapter = rvAdapter
+        // Set layout manager to position the items
+        rvChecklists.layoutManager = LinearLayoutManager(this)
     }
 
     private fun addItemAction(txt: TextView){

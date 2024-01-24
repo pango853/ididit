@@ -1,0 +1,34 @@
+id: 1
+published_date: 18/01/2024
+name: Kids checklists
+version: 0.0.1
+checklists:
+  - name: Wake-Up Tasks
+    id: 1-wake-up
+    time-start: 05:00:00
+    time-end: 10:00:00
+    tasks:
+      - name: Prepare your own snacks
+      - name: Get ready at doorway by 7:15 AM
+  - name: School Commuting Tasks
+    id: 2-school-commuting
+    time-start: 07:00:00
+    time-end: 09:00:00
+    tasks:
+      - name: Arrival on train
+      - name: Arrival on bus
+      - name: Arrival on school
+  - name: After-School Tasks
+    id: 3-after-school
+    time-start: 15:00:00
+    time-end: 19:00:00
+    tasks:
+      - name: Fold dried clothes
+      - name: One plus exercise
+        remarks: To ensure we are healthy everyday
+  - name: Bedtime Routines
+    id: 4-bedtime
+    time-start: 19:00:00
+    time-end: 22:00:00
+    tasks:
+      - name: Clean up toys

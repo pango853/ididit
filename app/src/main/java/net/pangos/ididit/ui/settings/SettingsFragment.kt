@@ -11,9 +11,6 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 import net.pangos.ididit.databinding.FragmentSettingsBinding
 
 class SettingsFragment : Fragment() {
@@ -47,25 +44,12 @@ class SettingsFragment : Fragment() {
             startActivity(gotoChecklistsActivity)
         }
 
-        val textView: TextView = binding.textSettings
-        notificationsViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
+        //val textView: TextView = binding.textSettings
+        //notificationsViewModel.text.observe(viewLifecycleOwner) {
+        //    textView.text = it
+        //}
 
-        // [TODO] hard-code developing here
-        items.add("test 1")
-        items.add("test 2")
-        items.add("test 3")
-
-        val rvChecklists: RecyclerView = binding.rvChecklists
-        rvAdapter = ChecklistsAdapter(items)
-        rvChecklists.adapter = rvAdapter
-        // Set layout manager to position the items
-        rvChecklists.layoutManager = LinearLayoutManager(this.context)
-
-        // editTextTextMultiLine
-        val editText: TextView = binding.editTextTextMultiLine
-
+        /* remove me
         val faButton: FloatingActionButton = binding.btnAdd
         faButton.setOnClickListener{
             // [TODO] try new way
@@ -76,6 +60,7 @@ class SettingsFragment : Fragment() {
         faButton.setOnLongClickListener{
             removeItemAction()
         }
+         */
 
         return root
     }
