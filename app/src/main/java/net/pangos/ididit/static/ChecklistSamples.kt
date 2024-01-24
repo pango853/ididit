@@ -11,7 +11,7 @@ object ChecklistSamples {
         val checklists = ArrayList<Checklist>()
 
         run{
-            checklists.add(Checklist(id="Wake-Up Tasks", name="1-wake-up", timeStart="05:00:00", timeEnd="10:00:00",
+            checklists.add(Checklist(name="Wake-Up Tasks", id="1-wake-up", timeStart="05:00:00", timeEnd="10:00:00",
                 tasks = mutableListOf(
                     Task(name="Prepare your own snacks"),
                     Task(name="Get ready at doorway", remark="by 7:15 AM")
@@ -23,10 +23,10 @@ object ChecklistSamples {
             tasks.add(Task(name="Arrival at MRT"))
             tasks.add(Task(name="Arrival on bus"))
             tasks.add(Task(name="Arrival at school"))
-            checklists.add(Checklist(id="School Commuting Tasks", name="2-school-commuting", timeStart="07:00:00", timeEnd="09:00:00", tasks=tasks))
+            checklists.add(Checklist(name="School Commuting Tasks", id="2-school-commuting", timeStart="07:00:00", timeEnd="09:00:00", tasks=tasks))
         }
         run{
-            checklists.add(Checklist(id="After-School Tasks", name="3-after-school", timeStart="15:00:00", timeEnd="19:00:00",
+            checklists.add(Checklist(name="After-School Tasks", id="3-after-school", timeStart="15:00:00", timeEnd="19:00:00",
                 tasks = mutableListOf(
                     Task(name="Fold dried clothes"),
                     Task(name="One plus exercise", remark="to ensure your are healthy everyday")
@@ -34,7 +34,7 @@ object ChecklistSamples {
             ))
         }
         run{
-            checklists.add(Checklist(id="Bedtime Routines", name="4-bedtime", timeStart="19:00:00", timeEnd="22:00:00",
+            checklists.add(Checklist(name="Bedtime Routines", id="4-bedtime", timeStart="19:00:00", timeEnd="22:00:00",
                 tasks = mutableListOf(
                     Task(name="Clean up toys")
                 )

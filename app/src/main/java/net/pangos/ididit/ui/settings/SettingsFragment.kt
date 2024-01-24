@@ -40,8 +40,12 @@ class SettingsFragment : Fragment() {
 
         val setting1: Button = binding.manageChecklistsBtn
         setting1.setOnClickListener{
+            Log.d(TAG, "Testing intent here")
+
             val gotoChecklistsActivity = Intent(this.activity, ChecklistsActivity::class.java)
             startActivity(gotoChecklistsActivity)
+
+            Log.d(TAG, "Testing intent here")
         }
 
         //val textView: TextView = binding.textSettings

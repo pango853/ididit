@@ -32,7 +32,7 @@ android {
     }
     buildFeatures {
         viewBinding = true
-        dataBinding = true
+        //dataBinding = true [TODO] try to use data binding in layouts
     }
 }
 

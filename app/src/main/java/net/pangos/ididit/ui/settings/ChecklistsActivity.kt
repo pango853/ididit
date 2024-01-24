@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import net.pangos.ididit.databinding.ActivityChecklistsBinding
+import net.pangos.ididit.static.ChecklistSamples
 
 class ChecklistsActivity : AppCompatActivity() {
     companion object{
@@ -23,7 +24,7 @@ class ChecklistsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         binding = ActivityChecklistsBinding.inflate(layoutInflater)
-        //setContentView(binding.root)
+        setContentView(binding.root)
 
         // [TODO] Use ActionBar or Toolbar instead
         //setSupportActionBar(binding.toolbar)
@@ -33,6 +34,10 @@ class ChecklistsActivity : AppCompatActivity() {
         //setupActionBarWithNavController(navController, appBarConfiguration)
 
         val rvChecklists: RecyclerView = binding.checklists.rvChecklists
+        val file = ChecklistSamples.generate()
+        for (checklist in file.checklists){
+            items.add(checklist.name)
+        }
         rvAdapter = ChecklistsAdapter(items)
         rvChecklists.adapter = rvAdapter
         // Set layout manager to position the items
