@@ -74,17 +74,14 @@ class SettingsFragment : Fragment() {
 
         val item = txt.text.toString()
         // Unlike ListView, no need to change via adapter
-        // just a data at the data source
-        val len = rvAdapter?.itemCount
-        // then notify the adapter about it
-        if (null != len) {
+		rvAdapter?.let{
+            // just a data at the data source
+            val len = it.itemCount
             items.add(item)
-            rvAdapter?.notifyItemInserted(len)
-            // also clean up the existing textview
-            txt.text = ""
-        }else{
-            Log.d(TAG, "ERROR")
-        }
+            it.notifyItemInserted(len)
+		}
+		// also clean up the existing textview
+		txt.text = ""
     }
     private fun removeItemAction(): Boolean{
         return false

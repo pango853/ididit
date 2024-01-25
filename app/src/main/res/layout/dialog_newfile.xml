@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+
+    <!-- 1. First set input items -->
+    <EditText
+        android:id="@+id/id_text"
+        android:inputType="textPersonName"
+        android:autofillHints="name"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:hint="@string/id" />
+    <Spinner
+        android:id="@+id/published_date_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_text"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@id/id_text"/>
+    <EditText
+        android:id="@+id/version_text"
+        android:inputType="text"
+        android:importantForAutofill="no"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/published_date_spinner"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@id/id_text"
+        android:hint="@string/version" />
+    <Spinner
+        android:id="@+id/number_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/version_text"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@id/id_text"
+        android:hint="@string/checklists_number" />
+    <Button
+        android:layout_width="96dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/number_spinner"
+        android:layout_alignParentEnd="true"
+        android:text="@string/title_add" />
+
+    <!-- 2. Then, add annotations -->
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="textEnd"
+        android:layout_toStartOf="@id/id_text"
+        android:text="@string/id" />
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="textEnd"
+        android:layout_alignTop="@id/published_date_spinner"
+        android:layout_toStartOf="@id/published_date_spinner"
+        android:text="@string/published_date" />
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="textEnd"
+        android:layout_alignTop="@id/version_text"
+        android:layout_toStartOf="@id/version_text"
+        android:text="@string/version" />
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="textEnd"
+        android:layout_alignTop="@id/number_spinner"
+        android:layout_toStartOf="@id/number_spinner"
+        android:text="@string/checklists_number" />
+</RelativeLayout>

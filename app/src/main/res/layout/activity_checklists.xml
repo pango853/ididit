@@ -7,12 +7,6 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context=".ui.settings.ChecklistsActivity">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Testing"
-        android:textSize="96dp"
-        />
     <!-- [ERROR] -Render Problem - java.lang.NoSuchFieldError: ACTION_SCROLL_IN_DIRECTION -->
     <!-- com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"

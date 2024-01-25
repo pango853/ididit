@@ -1,12 +1,13 @@
 package net.pangos.ididit.ui.settings
 
+import android.content.DialogInterface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.widget.TextView
-import android.widget.Toast
+import android.view.View
+import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import net.pangos.ididit.R
 import net.pangos.ididit.databinding.ActivityChecklistsBinding
 import net.pangos.ididit.static.ChecklistSamples
 
@@ -44,26 +45,35 @@ class ChecklistsActivity : AppCompatActivity() {
         rvChecklists.layoutManager = LinearLayoutManager(this)
     }
 
-    private fun addItemAction(txt: TextView){
-        Toast.makeText(this, "You entered: " + txt.text, Toast.LENGTH_SHORT).show()
-
-        val item = txt.text.toString()
-        // Unlike ListView, no need to change via adapter
-        // just a data at the data source
-        val len = rvAdapter?.itemCount
-        // then notify the adapter about it
-        if (null != len) {
-            items.add(item)
-            rvAdapter?.notifyItemInserted(len)
-            // also clean up the existing textview
-            txt.text = ""
-        }else{
-            Log.d(TAG, "ERROR")
-        }
+    fun newBtnAction(view: View) {
+        val builder = AlertDialog.Builder(view.context)
+        // Get the layout inflater.
+        builder.setView(this.layoutInflater.inflate(R.layout.dialog_newfile, null))
+            .setPositiveButton(R.string.create, DialogInterface.OnClickListener{dialog, id ->
+                // action 1
+            })
+            .setPositiveButton(R.string.cancel, DialogInterface.OnClickListener{dialog, id ->
+                dialog.cancel()
+            })
+//        Toast.makeText(this, "You entered: " + txt.text, Toast.LENGTH_SHORT).show()
+//
+//        val item = txt.text.toString()
+//        // Unlike ListView, no need to change via adapter
+//        rvAdapter?.let{
+//            // just add data at the data source
+//            items.add(item)
+//
+//            // then notify the adapter about it
+//            it.notifyItemInserted(it.itemCount)
+//        }
+//
+//        // finally, also clean up the existing textview
+//        txt.text = ""
     }
     private fun removeItemAction(): Boolean{
         return false
     }
+
 
 }
 
